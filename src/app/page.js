@@ -3,13 +3,14 @@ import { FiDownload } from "react-icons/fi";
 
 import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
     <section className="h-full">
       <div className="container h-full mx-auto">
         <div className="flex flex-col items-center justify-between xl:flex-row xl:pt-8 xl:pb-24">
-          <div className="text-center xl:text-left">
+          <div className="order-2 text-center xl:text-left xl:order-none">
             <span className="text-xl">Software Developer</span>
             <h1 className="mb-6 h1">
               Hello I&apos;m <br />{" "}
@@ -36,11 +37,12 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="order-1 mb-8 xl:order-none xl:mb-0">
             <Photo />
           </div>
         </div>
       </div>
+      {/* <Stats /> */}
     </section>
   );
 };
