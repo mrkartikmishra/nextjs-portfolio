@@ -7,28 +7,28 @@ import { easeIn, motion } from "framer-motion";
 const services = [
   {
     num: "01",
-    title: "Web Development",
+    title: "Blockchain Development",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
     href: "",
   },
   {
     num: "02",
-    title: "UI/UX Design",
+    title: "Backend Development",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
     href: "",
   },
   {
     num: "03",
-    title: "Logo Design",
+    title: "Frontend Development",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
     href: "",
   },
   {
     num: "04",
-    title: "SEO",
+    title: "Full Stack Development",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
     href: "",
