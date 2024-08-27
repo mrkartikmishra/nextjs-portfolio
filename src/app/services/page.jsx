@@ -28,7 +28,7 @@ const services = [
   },
   {
     num: "04",
-    title: "Full Stack Development",
+    title: "Fullstack Development",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
     href: "",
