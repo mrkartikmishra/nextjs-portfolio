@@ -20,6 +20,9 @@ import {
   FaEthereum,
   FaRust,
   FaAws,
+  FaGit,
+  FaDocker,
+  FaGithub,
 } from "react-icons/fa";
 
 import {
@@ -28,8 +31,18 @@ import {
   SiSolana,
   SiSolidity,
   SiGooglecloud,
+  SiShadcnui,
+  SiRedux,
+  SiReduxsaga,
+  SiMicrosoftsqlserver,
+  SiKubernetes,
+  SiTypescript,
+  SiGraphql,
+  SiWeb3Dotjs,
 } from "react-icons/si";
 import { AiOutlineOpenAI } from "react-icons/ai";
+import { BiLogoMongodb, BiLogoPostgresql } from "react-icons/bi";
+import { VscJson } from "react-icons/vsc";
 
 const about = {
   title: "About me",
@@ -49,8 +62,8 @@ const about = {
       fieldValue: "8+ Years",
     },
     {
-      fieldName: "Skype",
-      fieldValue: "kartikmishra31",
+      fieldName: "LinkedIn",
+      fieldValue: "/kartikmishra0404",
     },
     {
       fieldName: "Nationality",
@@ -144,8 +157,16 @@ const skills = {
       name: "rust",
     },
     {
+      icon: <SiWeb3Dotjs />,
+      name: "Web3",
+    },
+    {
       icon: <FaJs />,
       name: "javascript",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "typescript",
     },
     {
       icon: <FaReact />,
@@ -154,6 +175,54 @@ const skills = {
     {
       icon: <SiNextdotjs />,
       name: "next.js",
+    },
+    {
+      icon: <VscJson />,
+      name: "REST API",
+    },
+    {
+      icon: <SiGraphql />,
+      name: "graphQL",
+    },
+    {
+      icon: <SiRedux />,
+      name: "redux.js",
+    },
+    {
+      icon: <SiReduxsaga />,
+      name: "redux saga",
+    },
+    {
+      icon: <FaGit />,
+      name: "git",
+    },
+    {
+      icon: <FaGithub />,
+      name: "github",
+    },
+    {
+      icon: <FaDocker />,
+      name: "docker",
+    },
+    {
+      icon: <SiKubernetes />,
+      name: "kubernetes",
+    },
+    {
+      icon: <BiLogoPostgresql />,
+      name: "postgresql",
+    },
+    {
+      icon: <BiLogoMongodb />,
+      name: "mongodb",
+    },
+    {
+      icon: <SiMicrosoftsqlserver />,
+      name: "MS SQL server",
+    },
+    {
+      icon: <SiShadcnui />,
+      name: "ShadCn UI",
     },
     {
       icon: <SiTailwindcss />,
@@ -241,7 +310,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[200px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h1 className="text-xl max-w-[240px] min-h-[60px] text-center lg:text-left">
