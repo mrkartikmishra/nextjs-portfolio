@@ -31,7 +31,7 @@ const contactInfo = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Current location",
-    description: "Hyderabad, INDIA",
+    description: "Hyderabad, Telangana, INDIA",
   },
 ];
 
