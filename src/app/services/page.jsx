@@ -1,13 +1,14 @@
 "use client";
 
+import { easeIn, motion } from "framer-motion";
+
 import { BsArrowDownRight } from "react-icons/bs";
 import Link from "next/link";
-import { easeIn, motion } from "framer-motion";
 
 const services = [
   {
     num: "01",
-    title: "Blockchain Development",
+    title: "GenAI Application Development",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
     href: "",
@@ -37,38 +38,38 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
-      <div className="container mx-auto">
+    <section className="flex flex-col justify-center py-12 xl:py-0 min-h-[80vh]">
+      <div className="mx-auto container">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: easeIn },
           }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-[40px]"
+          className="gap-[40px] grid grid-cols-1 md:grid-cols-2"
         >
           {services.map((service, index) => {
             return (
               <div
                 key={index}
-                className="flex flex-col justify-center flex-1 gap-6 group"
+                className="group flex flex-col flex-1 justify-center gap-6"
               >
-                <div className="flex items-center justify-between w-full">
-                  <div className="text-5xl font-extrabold text-transparent transition-all duration-500 text-outline group-hover:text-outline-hover">
+                <div className="flex justify-between items-center w-full">
+                  <div className="text-outline group-hover:text-outline-hover font-extrabold text-transparent text-5xl transition-all duration-500">
                     {service.num}
                   </div>
                   <Link
                     href={service.href}
-                    className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
+                    className="flex justify-center items-center bg-white group-hover:bg-accent rounded-full w-[70px] h-[70px] hover:-rotate-45 transition-all duration-500"
                   >
-                    <BsArrowDownRight className="text-3xl text-primary" />
+                    <BsArrowDownRight className="text-primary text-3xl" />
                   </Link>
                 </div>
-                <div className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                <div className="font-bold text-[42px] text-white group-hover:text-accent leading-none transition-all duration-500">
                   {service.title}
                 </div>
                 <p className="text-white/60">{service.description}</p>
-                <div className="w-full border-b border-white/20"></div>
+                <div className="border-white/20 border-b w-full"></div>
               </div>
             );
           })}
