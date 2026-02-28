@@ -1,9 +1,10 @@
 "use client";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+import { CiMenuFries } from "react-icons/ci";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CiMenuFries } from "react-icons/ci";
 
 const links = [
   {
@@ -23,6 +24,10 @@ const links = [
     path: "/work",
   },
   {
+    name: "Certifications",
+    path: "/certifications",
+  },
+  {
     name: "Contact",
     path: "/contact",
   },
@@ -33,19 +38,19 @@ const MobileNav = () => {
 
   return (
     <Sheet>
-      <SheetTrigger className="flex items-center justify-center">
+      <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col">
-        <div className="mt-32 text-2xl text-center mb-28">
+        <div className="mt-32 mb-28 text-2xl text-center">
           <Link href={"/"}>
-            <h1 className="text-4xl font-semibold">
+            <h1 className="font-semibold text-4xl">
               Kartik
               <span className="text-accent">.</span>
             </h1>
           </Link>
         </div>
-        <nav className="flex flex-col items-center justify-center gap-8">
+        <nav className="flex flex-col justify-center items-center gap-8">
           {links.map((link, index) => {
             return (
               <Link

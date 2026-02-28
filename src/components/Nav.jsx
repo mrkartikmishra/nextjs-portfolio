@@ -1,9 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
-
-import Link from "next/link";
 
 const links = [
   {
@@ -21,6 +20,10 @@ const links = [
   {
     name: "Work",
     path: "/work",
+  },
+  {
+    name: "Certifications",
+    path: "/certifications",
   },
   {
     name: "Contact",
