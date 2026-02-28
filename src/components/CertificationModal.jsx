@@ -19,8 +19,8 @@ const CertificationModal = ({ isOpen, onClose, certificate }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-primary border border-white/20 w-full max-w-4xl max-h-[90vh] overflow-y-auto">
-        <DialogHeader className="pb-4 border-white/10 border-b">
+      <DialogContent className="flex flex-col bg-primary border border-white/20 w-full max-w-4xl max-h-[90vh] overflow-hidden">
+        <DialogHeader className="flex-shrink-0 pb-4 border-white/10 border-b">
           <DialogTitle className="pr-8 text-accent text-lg sm:text-2xl break-words">
             {certificate.title}
           </DialogTitle>
@@ -29,12 +29,13 @@ const CertificationModal = ({ isOpen, onClose, certificate }) => {
           </DialogClose>
         </DialogHeader>
 
-        <div className="flex flex-1 justify-center items-center bg-black/30 p-2 sm:p-4 rounded-lg min-h-[300px] sm:min-h-[500px] overflow-auto">
+        <div className="flex flex-grow justify-center items-center bg-black/30 p-2 sm:p-4 rounded-lg w-full min-h-0 overflow-hidden">
           {isPDF ? (
             <iframe
               src={`/assets/certificates/${certificate.file}`}
-              className="rounded-lg w-full h-[300px] sm:h-[500px]"
+              className="rounded-lg w-full max-h-[45vh] sm:max-h-[55vh] md:max-h-[75vh]"
               title={certificate.title}
+              style={{ aspectRatio: "8.5 / 11" }}
             />
           ) : (
             <Image
@@ -48,7 +49,7 @@ const CertificationModal = ({ isOpen, onClose, certificate }) => {
           )}
         </div>
 
-        <div className="px-2 sm:px-0 pt-4 border-white/10 border-t">
+        <div className="flex-shrink-0 px-2 sm:px-0 pt-4 border-white/10 border-t">
           <p className="text-white/80 text-xs sm:text-sm break-words">
             <span className="font-semibold text-accent">Issued by:</span>{" "}
             <span className="inline-block">{certificate.issuer}</span>
