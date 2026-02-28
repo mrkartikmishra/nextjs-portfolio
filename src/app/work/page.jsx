@@ -265,7 +265,7 @@ const Work = () => {
             </motion.div>
           </motion.div>
 
-          <h1 className="mb-4 h1">
+          <h1 className="mb-6 h2">
             My <span className="text-accent">Projects</span>
           </h1>
           <p className="max-w-2xl text-white/60 text-lg">
