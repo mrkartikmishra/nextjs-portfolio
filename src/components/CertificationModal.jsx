@@ -19,9 +19,9 @@ const CertificationModal = ({ isOpen, onClose, certificate }) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-primary border border-white/20 w-full max-w-4xl max-h-[90vh]">
-        <DialogHeader className="border-white/10 border-b">
-          <DialogTitle className="text-accent text-2xl">
+      <DialogContent className="bg-primary border border-white/20 w-full max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader className="pb-4 border-white/10 border-b">
+          <DialogTitle className="pr-8 text-accent text-lg sm:text-2xl break-words">
             {certificate.title}
           </DialogTitle>
           <DialogClose className="top-4 right-4 absolute text-white/60 hover:text-white transition-colors">
@@ -29,11 +29,11 @@ const CertificationModal = ({ isOpen, onClose, certificate }) => {
           </DialogClose>
         </DialogHeader>
 
-        <div className="flex flex-1 justify-center items-center bg-black/30 p-4 rounded-lg min-h-[500px] overflow-auto">
+        <div className="flex flex-1 justify-center items-center bg-black/30 p-2 sm:p-4 rounded-lg min-h-[300px] sm:min-h-[500px] overflow-auto">
           {isPDF ? (
             <iframe
               src={`/assets/certificates/${certificate.file}`}
-              className="rounded-lg w-full h-[500px]"
+              className="rounded-lg w-full h-[300px] sm:h-[500px]"
               title={certificate.title}
             />
           ) : (
@@ -48,12 +48,12 @@ const CertificationModal = ({ isOpen, onClose, certificate }) => {
           )}
         </div>
 
-        <div className="pt-4 border-white/10 border-t">
-          <p className="text-white/80 text-sm">
+        <div className="px-2 sm:px-0 pt-4 border-white/10 border-t">
+          <p className="text-white/80 text-xs sm:text-sm break-words">
             <span className="font-semibold text-accent">Issued by:</span>{" "}
-            {certificate.issuer}
+            <span className="inline-block">{certificate.issuer}</span>
           </p>
-          <p className="mt-1 text-white/80 text-sm">
+          <p className="mt-2 text-white/80 text-xs sm:text-sm">
             <span className="font-semibold text-accent">Date:</span>{" "}
             {certificate.date}
           </p>
