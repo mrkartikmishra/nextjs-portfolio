@@ -45,7 +45,7 @@ import { motion } from "framer-motion";
 const about = {
   title: "About me",
   description:
-    "Full-stack software engineer with 8+ years of experience architecting and deploying scalable enterprise solutions. Specialized in cloud technologies, AI/ML integration, and modern DevOps practices. Proven expertise in designing and implementing mission-critical applications for Fortune 500 clients with focus on technical excellence.",
+    "Full-stack software engineer with 9+ years of experience architecting and deploying scalable enterprise solutions. Specialized in cloud technologies, AI/ML integration, and modern DevOps practices. Proven expertise in designing and implementing mission-critical applications for Fortune 500 clients with focus on technical excellence.",
   info: [
     {
       fieldName: "Name",
@@ -57,7 +57,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "8+ Years",
+      fieldValue: "9+ Years",
     },
     {
       fieldName: "LinkedIn",

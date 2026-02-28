@@ -50,11 +50,12 @@ const Contact = () => {
             <form className="flex flex-col gap-6 bg-[#27272c] p-10 rounded-xl">
               <h3 className="text-accent text-4xl">Let&apos;s Collaborate</h3>
               <p className="text-white/60">
-                I'm actively seeking full-time opportunities with
-                forward-thinking organizations. If you're looking for a
-                dedicated software engineer who can contribute to your team's
-                technical goals and business objectives, I'd love to hear from
-                you. Let's connect and explore how we can work together.
+                I&apos;m actively seeking full-time opportunities with
+                forward-thinking organizations. If you&apos;re looking for a
+                dedicated software engineer who can contribute to your
+                team&apos;s technical goals and business objectives, I&apos;d
+                love to hear from you. Let&apos;s connect and explore how we can
+                work together.
               </p>
               <div className="gap-6 grid grid-cols-1 md:grid-cols-2">
                 <Input type="firstname" placeholder="First name" />
