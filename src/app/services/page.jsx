@@ -10,28 +10,28 @@ const services = [
     num: "01",
     title: "GenAI Application Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
+      "Design and implementation of AI-powered applications leveraging GPT, LLMs, and machine learning models. End-to-end development including prompt engineering, fine-tuning, and production deployment with enterprise-grade security and scalability.",
     href: "",
   },
   {
     num: "02",
     title: "Backend Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
+      "Architecting robust server-side applications with microservices, RESTful APIs, and event-driven architectures. Expertise in database optimization, caching strategies, and implementing secure authentication/authorization systems at scale.",
     href: "",
   },
   {
     num: "03",
     title: "Frontend Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
+      "Building responsive, accessible, and performant user interfaces with React, Next.js, and modern web standards. Focus on UX optimization, state management, component architecture, and cross-browser compatibility.",
     href: "",
   },
   {
     num: "04",
     title: "Full Stack Development",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe obcaecati, incidunt!",
+      "End-to-end development of complete web applications from database design through UI implementation. Specializing in cloud-native architectures, serverless computing, and DevOps practices for rapid, reliable deployments.",
     href: "",
   },
 ];

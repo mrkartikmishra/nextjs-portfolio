@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
-
-import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
+import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
 
 const Home = () => {
@@ -17,8 +16,9 @@ const Home = () => {
               <span className="text-accent">Kartik Mishra</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
+              Full-stack software engineer specializing in cloud-native
+              architecture, AI/ML integration, and DevOps. Building scalable,
+              high-performance systems that drive measurable business impact.
             </p>
             <div className="flex flex-col items-center gap-8 xl:flex-row">
               <Button

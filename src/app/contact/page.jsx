@@ -1,10 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
-
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import {
   Select,
   SelectContent,
@@ -15,7 +11,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
 
 const contactInfo = [
   {
@@ -45,17 +44,19 @@ const Contact = () => {
       }}
       className="py-6"
     >
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-[30px]">
-          <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
+      <div className="mx-auto container">
+        <div className="flex xl:flex-row flex-col gap-[30px]">
+          <div className="order-2 xl:order-none xl:w-[54%]">
+            <form className="flex flex-col gap-6 bg-[#27272c] p-10 rounded-xl">
+              <h3 className="text-accent text-4xl">Let&apos;s Collaborate</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint
-                aut totam alias sequi, impedit quos perspiciatis explicabo
-                repellat fugit omnis.
+                I'm actively seeking full-time opportunities with
+                forward-thinking organizations. If you're looking for a
+                dedicated software engineer who can contribute to your team's
+                technical goals and business objectives, I'd love to hear from
+                you. Let's connect and explore how we can work together.
               </p>
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div className="gap-6 grid grid-cols-1 md:grid-cols-2">
                 <Input type="firstname" placeholder="First name" />
                 <Input type="lastname" placeholder="Last name" />
                 <Input type="email" placeholder="Email address" />
@@ -90,12 +91,12 @@ const Contact = () => {
               </Button>
             </form>
           </div>
-          <div className="flex items-center flex-1 order-1 mb-8 xl:justify-end xl:order-none xl:mb-0">
+          <div className="flex flex-1 xl:justify-end items-center order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {contactInfo.map((info, index) => {
                 return (
                   <li key={index} className="flex items-center gap-1">
-                    <div className="w-[52px] xl:w-[72px] bg-[#2727c] text-accent rounded-md flex items-center justify-center">
+                    <div className="flex justify-center items-center bg-[#2727c] rounded-md w-[52px] xl:w-[72px] text-accent">
                       <div className="text-[28px]">{info.icon}</div>
                     </div>
                     <div className="felx-1">

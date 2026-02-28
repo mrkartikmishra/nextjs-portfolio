@@ -141,8 +141,9 @@ const Certifications = () => {
             Certifications & <span className="text-accent">Achievements</span>
           </h1>
           <p className="max-w-2xl text-white/60 text-lg">
-            Professional certifications and credentials demonstrating expertise
-            in cloud platforms, development tools, and modern technologies.
+            Industry-recognized certifications validating hands-on expertise in
+            cloud platforms, DevOps practices, AI/ML technologies, and modern
+            software development methodologies.
           </p>
 
           {/* Decorative elements */}
