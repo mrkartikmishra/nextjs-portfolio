@@ -203,6 +203,7 @@ const projectsData = [
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const showProjects = false;
 
   const handleCardClick = (project) => {
     setSelectedProject(project);
@@ -278,32 +279,53 @@ const Work = () => {
           <div className="flex items-center gap-2 mt-8">
             <div className="bg-gradient-to-r from-accent to-transparent rounded-full w-12 h-1" />
             <span className="font-semibold text-accent">
-              {projectsData.length} Projects
+              {/* {projectsData.length} Projects */}
+              {0} Projects
             </span>
           </div>
         </motion.div>
 
-        {/* Projects Grid */}
-        <motion.div
-          className="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          {projectsData.map((project, index) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-            >
-              <WorkCard
-                project={project}
-                onClick={() => handleCardClick(project)}
-              />
-            </motion.div>
-          ))}
-        </motion.div>
+        {/* Projects Grid (temporarily hidden) */}
+        {showProjects ? (
+          <motion.div
+            className="gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            {projectsData.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+              >
+                <WorkCard
+                  project={project}
+                  onClick={() => handleCardClick(project)}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        ) : (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="mt-8"
+          >
+            <div className="flex justify-center items-center py-20">
+              <div className="px-6 max-w-xl text-center">
+                <h2 className="mb-3 h3">
+                  Projects Section — Under Development
+                </h2>
+                <p className="text-white/70">
+                  This section is currently being updated. Check back soon!
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        )}
 
         {/* Motivational Section */}
         <motion.div
