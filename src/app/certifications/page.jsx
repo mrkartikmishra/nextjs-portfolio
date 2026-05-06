@@ -12,7 +12,7 @@ const certificationsData = [
     title: "AWS Certified AI Practitioner",
     issuer: "Amazon Web Services",
     date: "2026",
-    file: "AWS_Certified_AI_Practitioner.png",
+    file: "AWS_Certified_AI_Practitioner.pdf",
     description:
       "Validates foundational knowledge of AI/ML concepts and AWS AI services including Amazon SageMaker and other AI/ML solutions.",
   },

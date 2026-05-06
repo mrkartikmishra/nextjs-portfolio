@@ -1,6 +1,7 @@
 "use client";
 
 import { BiLogoMongodb, BiLogoPostgresql } from "react-icons/bi";
+import { Bot, Sparkles, Workflow, Wrench } from "lucide-react";
 import {
   FaAws,
   FaCss3,
@@ -16,9 +17,9 @@ import {
 } from "react-icons/fa";
 import {
   SiAnthropic,
+  SiGithubcopilot,
   SiGooglecloud,
   SiGraphql,
-  SiGithubcopilot,
   SiKubernetes,
   SiLangchain,
   SiMicrosoftsqlserver,
@@ -34,8 +35,8 @@ import {
   SiWeb3Dotjs,
 } from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
 import { AiOutlineOpenAI } from "react-icons/ai";
-import { Sparkles, Bot, Workflow, Wrench } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { VscJson } from "react-icons/vsc";
 import { motion } from "framer-motion";
@@ -87,7 +88,7 @@ const experience = {
     "Architected and deployed production-grade applications across AWS, GCP, and hybrid cloud environments. Designed microservices architectures, implemented CI/CD pipelines, and optimized system performance. Contributed to digital transformation initiatives delivering measurable business impact through technical innovation.",
   items: [
     {
-      company: "LTIMindtree",
+      company: "LTM (Formerly LTIMindtree)",
       position: "Specialist - Product Engineering",
       duration: "2020-present",
     },
@@ -286,7 +287,7 @@ const Resume = () => {
                   transition={{ duration: 0.4 }}
                   className="flex flex-col gap-3"
                 >
-                  <span className="inline-flex items-center gap-2 w-fit mx-auto xl:mx-0 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm px-3 py-1.5 border border-accent/30 rounded-full font-medium text-accent text-sm">
+                  <span className="inline-flex items-center gap-2 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm mx-auto xl:mx-0 px-3 py-1.5 border border-accent/30 rounded-full w-fit font-medium text-accent text-sm">
                     Career Timeline
                   </span>
                   <h3 className="font-bold text-4xl">{experience.title}</h3>
@@ -341,7 +342,7 @@ const Resume = () => {
                   transition={{ duration: 0.4 }}
                   className="flex flex-col gap-3"
                 >
-                  <span className="inline-flex items-center gap-2 w-fit mx-auto xl:mx-0 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm px-3 py-1.5 border border-accent/30 rounded-full font-medium text-accent text-sm">
+                  <span className="inline-flex items-center gap-2 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm mx-auto xl:mx-0 px-3 py-1.5 border border-accent/30 rounded-full w-fit font-medium text-accent text-sm">
                     Academic Background
                   </span>
                   <h3 className="font-bold text-4xl">{education.title}</h3>
@@ -396,7 +397,7 @@ const Resume = () => {
                   transition={{ duration: 0.4 }}
                   className="flex flex-col gap-[30px] xl:text-left text-center"
                 >
-                  <span className="inline-flex items-center gap-2 w-fit mx-auto xl:mx-0 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm px-3 py-1.5 border border-accent/30 rounded-full font-medium text-accent text-sm">
+                  <span className="inline-flex items-center gap-2 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm mx-auto xl:mx-0 px-3 py-1.5 border border-accent/30 rounded-full w-fit font-medium text-accent text-sm">
                     Technical Expertise
                   </span>
                   <h3 className="font-bold text-4xl">{skills.title}</h3>
@@ -426,11 +427,11 @@ const Resume = () => {
                           delay: 0.2 + index * 0.02,
                         }}
                       >
-                        <div className="group flex flex-col justify-center items-center gap-3 bg-[#232329] rounded-xl w-full h-[150px] px-2 py-4">
+                        <div className="group flex flex-col justify-center items-center gap-3 bg-[#232329] px-2 py-4 rounded-xl w-full h-[150px]">
                           <div className="group-hover:text-accent text-5xl transition-all duration-300 shrink-0">
                             {skill.icon}
                           </div>
-                          <span className="text-white/80 group-hover:text-accent text-sm font-medium text-center capitalize transition-colors duration-300 line-clamp-2">
+                          <span className="font-medium text-white/80 group-hover:text-accent text-sm text-center capitalize line-clamp-2 transition-colors duration-300">
                             {skill.name}
                           </span>
                         </div>
@@ -452,10 +453,10 @@ const Resume = () => {
                   transition={{ duration: 0.4 }}
                   className="flex flex-col gap-3"
                 >
-                  <span className="inline-flex items-center gap-2 w-fit mx-auto xl:mx-0 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm px-3 py-1.5 border border-accent/30 rounded-full font-medium text-accent text-sm">
+                  <span className="inline-flex items-center gap-2 bg-gradient-to-r from-accent/20 to-accent/10 backdrop-blur-sm mx-auto xl:mx-0 px-3 py-1.5 border border-accent/30 rounded-full w-fit font-medium text-accent text-sm">
                     Professional Profile
                   </span>
-                  <h3 className="font-bold text-4xl xl:text-[2.5rem]">
+                  <h3 className="font-bold xl:text-[2.5rem] text-4xl">
                     {about.title}
                   </h3>
                 </motion.div>
@@ -465,10 +466,10 @@ const Resume = () => {
                   initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.08 }}
-                  className="relative overflow-hidden rounded-xl border border-accent/20 bg-gradient-to-br from-white/5 to-white/0 p-6 xl:p-8"
+                  className="relative bg-gradient-to-br from-white/5 to-white/0 p-6 xl:p-8 border border-accent/20 rounded-xl overflow-hidden"
                 >
-                  <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-accent to-accent/50 rounded-l" />
-                  <p className="pl-4 xl:pl-5 text-white/80 text-base xl:text-lg leading-relaxed max-w-[680px] mx-auto xl:mx-0">
+                  <div className="top-0 left-0 absolute bg-gradient-to-b from-accent to-accent/50 rounded-l w-1 h-full" />
+                  <p className="mx-auto xl:mx-0 pl-4 xl:pl-5 max-w-[680px] text-white/80 text-base xl:text-lg leading-relaxed">
                     {about.description}
                   </p>
                 </motion.div>
@@ -478,7 +479,7 @@ const Resume = () => {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ duration: 0.4, delay: 0.15 }}
-                  className="gap-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 max-w-[720px] mx-auto xl:mx-0"
+                  className="gap-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 mx-auto xl:mx-0 max-w-[720px]"
                 >
                   {about.info.map((item, index) => (
                     <motion.li
@@ -489,12 +490,12 @@ const Resume = () => {
                         duration: 0.3,
                         delay: 0.2 + index * 0.04,
                       }}
-                      className="group flex flex-col gap-1 rounded-xl border border-white/10 bg-[#232329] hover:border-accent/30 hover:bg-white/5 px-5 py-4 transition-all duration-300"
+                      className="group flex flex-col gap-1 bg-[#232329] hover:bg-white/5 px-5 py-4 border border-white/10 hover:border-accent/30 rounded-xl transition-all duration-300"
                     >
-                      <span className="text-white/50 text-xs font-medium uppercase tracking-wider">
+                      <span className="font-medium text-white/50 text-xs uppercase tracking-wider">
                         {item.fieldName}
                       </span>
-                      <span className="text-white font-semibold text-lg truncate">
+                      <span className="font-semibold text-white text-lg truncate">
                         {item.fieldValue}
                       </span>
                     </motion.li>
